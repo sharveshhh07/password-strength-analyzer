@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(680px, 100%);
+  background: white;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(23, 32, 51, 0.12);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #5f6b7a;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+label, h2 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.input-row, .suggestion-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd3df;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #526dfe;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: #526dfe;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.meter {
+  height: 10px;
+  background: #e7ebf1;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+#meterBar {
+  height: 100%;
+  width: 0;
+  transition: width 0.25s ease;
+  background: #cbd3df;
+}
+
+.strength {
+  font-weight: 700;
+  margin: 10px 0 18px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stats div {
+  background: #f5f7fa;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stats span {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.stats small {
+  color: #687385;
+}
+
+.checks {
+  margin-top: 24px;
+}
+
+.checks p {
+  margin: 9px 0;
+  color: #596576;
+}
+
+.feedback {
+  margin-top: 20px;
+  padding: 14px;
+  background: #f5f7fa;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+.alternative {
+  margin-top: 24px;
+}
+
+.secondary {
+  margin-top: 10px;
+  background: #172033;
+}
+
+.note {
+  color: #788395;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 22px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}

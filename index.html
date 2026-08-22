@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Password Strength Analyzer</h1>
+      <p class="subtitle">Check password length, complexity, patterns, and get stronger alternatives.</p>
+
+      <label for="password">Enter a password</label>
+      <div class="input-row">
+        <input id="password" type="password" placeholder="Type a password..." autocomplete="off">
+        <button id="toggle" type="button">Show</button>
+      </div>
+
+      <div class="meter">
+        <div id="meterBar"></div>
+      </div>
+      <p id="strengthText" class="strength">Strength: —</p>
+
+      <div class="stats">
+        <div><span id="lengthStat">0</span><small>Length</small></div>
+        <div><span id="scoreStat">0/100</span><small>Score</small></div>
+        <div><span id="entropyStat">0 bits</span><small>Entropy*</small></div>
+      </div>
+
+      <div class="checks">
+        <h2>Security checks</h2>
+        <p id="lengthCheck">○ At least 12 characters</p>
+        <p id="upperCheck">○ Contains uppercase letters</p>
+        <p id="lowerCheck">○ Contains lowercase letters</p>
+        <p id="numberCheck">○ Contains numbers</p>
+        <p id="symbolCheck">○ Contains symbols</p>
+        <p id="patternCheck">○ Avoids repeated/common patterns</p>
+      </div>
+
+      <div id="feedback" class="feedback">
+        Start typing to analyze your password.
+      </div>
+
+      <div class="alternative">
+        <h2>Stronger alternative</h2>
+        <div class="suggestion-row">
+          <input id="suggestion" readonly placeholder="Suggestion appears here">
+          <button id="copy" type="button">Copy</button>
+        </div>
+        <button id="generate" class="secondary" type="button">Generate another</button>
+      </div>
+
+      <p class="note">*Entropy is an estimate based on the character set. Passwords are analyzed locally in your browser and are not sent to a server.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
